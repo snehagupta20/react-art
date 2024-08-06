@@ -63,7 +63,6 @@ The class name will be transformed into a unique name, e.g., `paragraph -> _para
 
 Here's the provided content in markdown format:
 
-```markdown
 ## Styled Components
 
 Styled Components is a library for styling React components using tagged template literals. To use Styled Components, follow these steps:
@@ -183,7 +182,6 @@ Styled Components is a library for styling React components using tagged templat
 
 1. **Many CSS Classes**: Can lead to a large number of utility classes in your JSX.
 2. **More Code in JSX**: Increases the amount of code within your JSX files.
-```
 
 
 For more details or to contribute, please contact [20namastesneha@gmail.com](mailto:20namastesneha@gmail.com).
