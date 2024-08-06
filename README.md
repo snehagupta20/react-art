@@ -113,5 +113,52 @@ const Label = styled.label`
 ```
 
 
+we can now add these stylings without converting each and every element under header tag to styled-component
+just change header -> &, so that it understands that & means header and all image tag under header tag gets the css
+```jsx
+const StyledHeader = styled.header`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  & img {
+  object-fit: contain;
+  margin-bottom: 2rem;
+  width: 11rem;
+  height: 11rem;
+}
+
+& h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.4em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #9a3412;
+  font-family: 'Pacifico', cursive;
+  margin: 0;
+}
+
+& p {
+  text-align: center;
+  color: #a39191;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  & {
+    margin-bottom: 4rem;
+  }
+
+  & h1 {
+    font-size: 2.25rem;
+  }
+}
+`
+```
+
 For more details or to contribute, please contact [20namastesneha@gmail.com](mailto:20namastesneha@gmail.com).
 ```
