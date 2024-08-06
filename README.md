@@ -105,6 +105,13 @@ after:
 
 this is called tagged template
 
+this is how we can also add dynamic styles using styled components syntax
+```jsx
+const Label = styled.label`
+  color: ${(props) => props.invalid ? '#f87171' : '#6b7280'} ;
+`
+```
+
 
 For more details or to contribute, please contact [20namastesneha@gmail.com](mailto:20namastesneha@gmail.com).
 ```

@@ -14,7 +14,7 @@ const Label = styled.label`
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #6b7280;
+  color: ${(props) => props.invalid ? '#f87171' : '#6b7280'} ;
 `
 
 const Input = styled.input`
@@ -52,10 +52,10 @@ export default function AuthInputs() {
     <div id="auth-inputs">
       <ControlContainer>
         <p>
-          <Label>Email</Label>
+          <Label invalid ={emailNotValid}>Email</Label>
           <Input
             type="email"
-            className={emailNotValid ? 'invalid' : undefined}
+            // className={emailNotValid ? 'invalid' : undefined}
             onChange={(event) => handleInputChange('email', event.target.value)}
           />
         </p>
@@ -63,7 +63,7 @@ export default function AuthInputs() {
           <Label>Password</Label>
           <Input
             type="password"
-            className={passwordNotValid ? 'invalid' : undefined}
+            // className={passwordNotValid ? 'invalid' : undefined}
             onChange={(event) =>
               handleInputChange('password', event.target.value)
             }
